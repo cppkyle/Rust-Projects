@@ -1,2 +1,2 @@
-# tip_calculator
-Tip Calculator made with Rust
+# Rust Projects
+Rust Projects that I wanted to share!
