@@ -7,7 +7,7 @@ fn main() {
     let mut ai_wins = 0;
     let mut wins = 0;
     loop {
-        println!("\nWins: {} Losses: {}\nChoose your move!\nRock, Paper or Scissor", wins, ai_wins);
+        println!("\nWins: {} Losses: {}\nChoose your move!\nRock, Paper or Scissor\r\n", wins, ai_wins);
         let mut user_move = String::new();
         io::stdin()
             .read_line(&mut user_move)
@@ -25,7 +25,8 @@ fn main() {
         }
 
         let len = user_move.len();
-        user_move.truncate(len - 1);
+        let user_move_without = user_move.trim_right().len();
+        user_move.truncate(user_move_without);
 
         if user_move.to_lowercase() == ai_move.to_lowercase() {
             println!("Tie!")
