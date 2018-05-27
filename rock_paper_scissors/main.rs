@@ -53,8 +53,12 @@ fn main() {
 
         if wins == 4 {
             println!("\nYou won the game! You: 4 Opponent: {}\n", ai_wins);
+            wins = 0;
+            ai_wins = 0;
         } else if ai_wins == 4 {
             println!("\nYou lost the game! You: {} Opponent: 4\n", wins);
+            wins = 0;
+            ai_wins = 0;
         }
     }
 
